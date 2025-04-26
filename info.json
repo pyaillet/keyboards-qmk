@@ -1,6 +1,6 @@
 {
-    "manufacturer": "sadekbaroudi",
-    "keyboard_name": "dweeeeep",
+    "manufacturer": "Logitech, Inc.",
+    "keyboard_name": "HID-Compliant Keyboard",
     "url": "https://github.com/sadekbaroudi/sweep36/",
     "maintainer": "Sadek Baroudi <sadekbaroudi@gmail.com>",
     "development_board": "promicro",
@@ -16,8 +16,8 @@
     },
     "usb": {
         "device_version": "1.0.0",
-        "vid": "0xFEFE",
-        "pid": "0x5111",
+        "vid": "0x046D",
+        "pid": "0xC316",
     },
     "split": {
         "enabled": true,

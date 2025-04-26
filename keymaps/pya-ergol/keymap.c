@@ -2,9 +2,9 @@
 
 // led effects
 #define LED_FLASH_INTERVAL 100
-#define RGBLIGHT_DEFAULT_VAL 255
-#define RGBLIGHT_DEFAULT_HUE 169
-#define RGBLIGHT_DEFAULT_SAT 255
+#define RGBLIGHT_DEFAULT_VAL 0
+#define RGBLIGHT_DEFAULT_HUE 0
+#define RGBLIGHT_DEFAULT_SAT 0
 
 #define DELAY_TAP_CODE 10
 
@@ -12,11 +12,11 @@
 enum layer_names {
   _QWERTY,
   _ERGOL,
-  //_ADJUST,
   _SPEC1,
   _SPEC2,
   _NAV,
-  _ALT
+  _ALT,
+  _ADJUST
 };
 
 #define MY_MUTE KC_KB_MUTE
@@ -60,16 +60,29 @@ enum my_keycodes {
   MY_RST
 };
 
-#define NA_SPC LT(_NAV, KC_SPC)
+#define NA_SPC  LT(_NAV, KC_SPC)
 #define SH_BSPC MT(MOD_LSFT, KC_BSPC)
-#define AL_ENT LT(_ALT, KC_ENT)
+#define AL_ENT  LT(_ALT, KC_ENT)
+#define ADJUST  MO(_ADJUST)
 
+#define LS_A LSFT_T(KC_A)
 #define LG_S LGUI_T(KC_S)
 #define LA_E LALT_T(KC_E)
 #define LC_N LCTL_T(KC_N)
 #define RC_R RCTL_T(KC_R)
 #define RA_T RALT_T(KC_T)
 #define RG_I RGUI_T(KC_I)
+#define RS_U RSFT_T(KC_U)
+
+uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
+    switch (keycode) {
+        case NA_SPC:
+            return 180;
+        default:
+            return TAPPING_TERM;
+    }
+}
+
 
 // clang-format off
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
@@ -92,9 +105,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     // row to use ctrl, gui, alt, or shift
     [_QWERTY] = LAYOUT_split_3x5_3(
         KC_Q,   KC_W,    KC_E,    KC_R,    KC_T,       KC_Y,    KC_U,    KC_I,    KC_O,    KC_P, 
-	KC_A,   KC_S,    KC_D,    KC_F,    KC_G,       KC_H,    KC_J,    KC_K,    KC_L,    KC_SCLN,
-	KC_Z,   KC_X,    KC_C,    KC_V,    KC_B,       KC_N,    KC_M,    KC_COMM, KC_DOT,  KC_SLSH, 
-	                 KC_LALT, KC_LGUI, KC_SPC,     KC_SPC,  KC_RGUI, KC_RALT
+	      KC_A,   KC_S,    KC_D,    KC_F,    KC_G,       KC_H,    KC_J,    KC_K,    KC_L,    KC_SCLN,
+	      KC_Z,   KC_X,    KC_C,    KC_V,    KC_B,       KC_N,    KC_M,    KC_COMM, KC_DOT,  KC_SLSH,
+	                       KC_LALT, KC_LGUI, KC_SPC,     KC_SPC,  KC_RGUI, KC_RALT
     ),
 
     /* Ergol
@@ -115,9 +128,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     // row to use ctrl, gui, alt, or shift
     [_ERGOL] = LAYOUT_split_3x5_3(
         KC_Q, KC_C, KC_O,    KC_P,    KC_W,   KC_J,   KC_M,   KC_D,   MY_STAR, KC_Y,
-	KC_A, LG_S, LA_E,    LC_N,    KC_F,   KC_L,   RC_R,   RA_T,   RG_I,    KC_U, 
-	KC_Z, KC_X, KC_MINS, KC_V,    KC_B,   KC_DOT, KC_H,   KC_G,   KC_COMM, KC_K, 
-	            KC_LGUI, SH_BSPC, NA_SPC, NA_SPC, AL_ENT, KC_RGUI
+	      LS_A, LG_S, LA_E,    LC_N,    KC_F,   KC_L,   RC_R,   RA_T,   RG_I,    RS_U,
+	      KC_Z, KC_X, KC_MINS, KC_V,    KC_B,   KC_DOT, KC_H,   KC_G,   KC_COMM, KC_K,
+	                  ADJUST,  SH_BSPC, NA_SPC, NA_SPC, AL_ENT, ADJUST
     ),
 
     /* Nav
@@ -135,8 +148,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
      */
     [_NAV] = LAYOUT_split_3x5_3(
         KC_TAB,  KC_HOME, KC_UP,   KC_END,  KC_PGUP, KC_MINS, KC_7,   KC_8,   KC_9, _______, 
-	KC_CAPS, KC_LEFT, KC_DOWN, KC_RGHT, KC_PGDN, KC_COLN, KC_4,   KC_5,   KC_6, KC_0, 
-	_______, MY_VOLU, MY_MUTE, MY_VOLD, MY_BTAB, _______, KC_1,   KC_2,   KC_3, _______,
+	      KC_CAPS, KC_LEFT, KC_DOWN, KC_RGHT, KC_PGDN, KC_COLN, KC_4,   KC_5,   KC_6, KC_0,
+	      KC_MPLY, MY_VOLD, MY_MUTE, MY_VOLU, MY_BTAB, _______, KC_1,   KC_2,   KC_3, _______,
                           MY_SWTC, KC_DEL,  _______, _______, KC_ESC, MY_SWTC
     ),
 
@@ -155,12 +168,12 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
      */
     [_ALT] = LAYOUT_split_3x5_3(
         KC_CIRC, KC_LT,   KC_GT,   KC_DLR,  KC_PERC, KC_AT,   KC_AMPR, KC_ASTR, KC_QUOT, KC_GRV,
-	KC_LCBR, KC_LPRN, KC_RPRN, KC_RCBR, KC_EQL,  KC_BSLS, KC_PLUS, KC_MINS, KC_SLSH, KC_DQUO, 
-	KC_TILD, KC_LBRC, KC_RBRC, KC_UNDS, KC_HASH, KC_PIPE, KC_EXLM, KC_SCLN, KC_COLN, KC_QUES, 
+        KC_LCBR, KC_LPRN, KC_RPRN, KC_RCBR, KC_EQL,  KC_BSLS, KC_PLUS, KC_MINS, KC_SLSH, KC_DQUO,
+        KC_TILD, KC_LBRC, KC_RBRC, KC_UNDS, KC_HASH, KC_PIPE, KC_EXLM, KC_SCLN, KC_COLN, KC_QUES,
                           _______, _______, _______, _______, _______, _______
     ),
 
-    /* Spec1
+    /* Adjust
      *
      * ,----------------------------------. ,----------------------------------.
      * | RGB_T| RGB_R| RGB_F|      |QWERTY| |   F1 |  F2  |  F3  |  F4   |  F5 |
@@ -173,16 +186,12 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
      *             | LOWER|      |      |    |      |      | RAISE|
      *             `--------------------'    `--------------------.
      */
-    /*
     [_ADJUST] =  LAYOUT_split_3x5_3(
-      RGB_TOG, RGB_RMOD, RGB_MOD, _______, TO(_QWERTY),       KC_F1,   KC_F2,
-    KC_F3,   KC_F4,    KC_F5, RGB_SPI, RGB_HUI,  RGB_SAI, RGB_VAI, TO(_COLEMAK),
-    KC_F6,   KC_F7,   KC_F8,   KC_F9,    KC_F10, RGB_SPD, RGB_HUD,  RGB_SAD,
-    RGB_VAD, _______,           KC_F11,  KC_F12,  _______, _______,  QK_BOOT,
-                         _______, _______, _______,           _______, _______,
-    _______
+      RGB_TOG, RGB_RMOD, RGB_MOD, _______, DF(_QWERTY),       KC_F1,   KC_F2,   KC_F3,   KC_F4,    KC_F5,
+      RGB_SPI, RGB_HUI,  RGB_SAI, RGB_VAI, DF(_ERGOL),        KC_F6,   KC_F7,   KC_F8,   KC_F9,    KC_F10,
+      RGB_SPD, RGB_HUD,  RGB_SAD, RGB_VAD, _______,           KC_F11,  KC_F12,  _______, _______,  QK_BOOT,
+                         _______, _______, _______,           _______, _______, _______
     ),
-    */
 
     /* Spec1
      *
@@ -199,9 +208,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
      */
     [_SPEC1] = LAYOUT_split_3x5_3(
         MY_ACIR, MY_CCDL, MY_OE,   MY_OCIR, MY_RST,  MY_RST,  MY_MICR, KC_UNDS, MY_STAR, MY_UCIR,
-	MY_AGRV, MY_EACT, MY_EGRV, MY_ECIR, MY_NTIL, KC_LPRN, KC_RPRN, MY_ICIR, MY_ITRE, MY_UGRV,
-	MY_AE,   MY_ESST, MY_RST,  MY_DSH1, MY_DSH2, MY_3DTS, MY_RST,  MY_MICR, MY_MDOT, MY_RST, 
-	                  MY_RST,  MY_RST,  MY_RST,  MY_RST,  MY_RST,  MY_RST
+	      MY_AGRV, MY_EACT, MY_EGRV, MY_ECIR, MY_NTIL, KC_LPRN, KC_RPRN, MY_ICIR, MY_ITRE, MY_UGRV,
+        MY_AE,   MY_ESST, MY_RST,  MY_DSH1, MY_DSH2, MY_3DTS, MY_RST,  MY_MICR, MY_MDOT, MY_RST,
+	                        MY_RST,  MY_RST,  MY_RST,  MY_RST,  MY_RST,  MY_RST
     ),
 
     /* Spec2
@@ -212,16 +221,16 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
      * |   ä  |      |   ë  |      |      | |      |      |   ẗ  |   ï  |   ü  |
      * |------+------+------+------+------| |------+------+------+------+------|
      * |      |   ẍ  |      |      |      | |      |   ḧ  |      |      |      |
-     * `----------------------------------' `----------------------------------'
+     * `-----------------------------' `----------------------------------'
      *             ,--------------------.    ,--------------------.
      *             |      |      |      |    |      |      |      |
      *             `--------------------'    `--------------------.
      */
     [_SPEC2] = LAYOUT_split_3x5_3(
-        MY_RST,  MY_RST,  MY_OTRE, MY_RST, MY_WTRE, MY_RST, MY_RST,  MY_RST,  MY_STAR /* MY_APST */, MY_YTRE,
-	MY_ATRE, MY_RST,  MY_ETRE, MY_RST, MY_RST,  MY_RST, MY_RST,  MY_TTRE, MY_ITRE, MY_UTRE,
-	MY_RST,  MY_XTRE, MY_RST,  MY_RST, MY_RST,  MY_RST, MY_HTRE, MY_RST,  MY_RST,  MY_RST,
-                          MY_RST,  MY_RST, MY_RST,  MY_RST, MY_RST,  MY_RST
+        MY_RST,  MY_RST,  MY_OTRE, MY_RST, MY_WTRE, MY_RST, MY_RST,  MY_RST,  MY_STAR, MY_YTRE,
+        MY_ATRE, MY_RST,  MY_ETRE, MY_RST, MY_RST,  MY_RST, MY_RST,  MY_TTRE, MY_ITRE, MY_UTRE,
+	      MY_RST,  MY_XTRE, MY_RST,  MY_RST, MY_RST,  MY_RST, MY_HTRE, MY_RST,  MY_RST,  MY_RST,
+	                        MY_RST,  MY_RST,  MY_RST,  MY_RST,  MY_RST,  MY_RST
     )
 };
 

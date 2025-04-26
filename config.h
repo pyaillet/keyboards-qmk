@@ -1,6 +1,7 @@
 #pragma once
 
 #define MASTER_RIGHT
+#define TAPPING_TERM_PER_KEY
 
 #ifdef RGBLIGHT_ENABLE
   #define RGBLIGHT_LED_COUNT 36
