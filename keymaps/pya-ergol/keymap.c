@@ -147,9 +147,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
      *             `--------------------'    `--------------------.
      */
     [_NAV] = LAYOUT_split_3x5_3(
-        KC_TAB,  KC_HOME, KC_UP,   KC_END,  KC_PGUP, KC_MINS, KC_7,   KC_8,   KC_9, _______, 
+        KC_TAB,  KC_HOME, KC_UP,   KC_END,  KC_PGUP, KC_PLUS, KC_7,   KC_8,   KC_9, KC_SLSH, 
 	      KC_CAPS, KC_LEFT, KC_DOWN, KC_RGHT, KC_PGDN, KC_COLN, KC_4,   KC_5,   KC_6, KC_0,
-	      KC_MPLY, MY_VOLD, MY_MUTE, MY_VOLU, MY_BTAB, _______, KC_1,   KC_2,   KC_3, _______,
+	      KC_MPLY, MY_VOLD, MY_MUTE, MY_VOLU, MY_BTAB, KC_MINS, KC_1,   KC_2,   KC_3, KC_ASTR,
                           MY_SWTC, KC_DEL,  _______, _______, KC_ESC, MY_SWTC
     ),
 
