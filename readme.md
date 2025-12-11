@@ -19,3 +19,8 @@ What it looks like:
 
 ![Tented keyboard](./imgs/dweeep_tented.jpg)
 ![Flat keyboard](./imgs/dweeep_flat.jpg)
+
+
+Preview of the model:
+
+![Preview of the model](./imgs/dweeep_bottom_model.png)
