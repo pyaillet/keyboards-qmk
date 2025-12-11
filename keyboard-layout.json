@@ -1,0 +1,277 @@
+[
+  {
+    "switchMount": "cherry",
+    "switchBrand": "kailh",
+    "switchType": "PG151101D05/D43",
+    "pcb": true
+  },
+  [
+    {
+      "y": 1,
+      "x": 2.5,
+      "t": "#fb3bff\n#0005bd\n#a816c6\n#d78502",
+      "fa": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        6
+      ]
+    },
+    "\n>\nö\n<i class='kb kb-Arrows-Up'></i>\n\n\n\n\n\nO",
+    {
+      "x": 8.25,
+      "t": "#fb3bff\n#0005bd\n\n#f09707\n\n\n\n\n#a402a8"
+    },
+    "\n*\n\n8\n\n\n\n\n\nD"
+  ],
+  [
+    {
+      "y": -0.8700000000000001,
+      "x": 1.5,
+      "t": "#fb3bff\n#0005bd\n\n#d78502\n\n\n\n\n#a402a8"
+    },
+    "ç\n<\n\n<i class='kb kb-Arrows-Top-2'></i>\n\n\n\n\n\nC",
+    {
+      "x": 1
+    },
+    "ô\n$\n\n<i class='kb kb-Arrows-Bottom-2'></i>\n\n\n\n\n\nP",
+    {
+      "x": 6.25,
+      "t": "#fb3bff\n#0005bd\n\n#f09707\n\n\n\n\n#a402a8"
+    },
+    "\n&\n\n7\n\n\n\n\n\nM",
+    {
+      "x": 1,
+      "t": "#fb3bff\n#0005bd\n\n#f09707\n\n\n\n\n#\n#d021b9"
+    },
+    "\n\n\n9\n\n\n\n\n\n★"
+  ],
+  [
+    {
+      "y": -0.8799999999999999,
+      "x": 4.5,
+      "t": "#fb3bff\n#0005bd\n\n#d78502\n\n\n\n\n#a402a8"
+    },
+    "\n%\n\n<i class='kb kb-Unicode-Page-Up-3'></i>\n\n\n\n\n\nW",
+    {
+      "x": 4.25,
+      "t": "#fb3bff\n#0005bd\n\n#f09707\n\n\n\n\n#a402a8"
+    },
+    "\n@\n\n-\n\n\n\n\n\nJ"
+  ],
+  [
+    {
+      "y": -0.8700000000000001,
+      "x": 0.5,
+      "t": "#fb3bff\n#0005bd\n\n#d78502\n\n\n\n\n#a402a8"
+    },
+    "â\n^\n\n<i class='kb kb-Line-Start-End'></i>\n\n\n\n\n\nQ",
+    {
+      "x": 12.25,
+      "t": "#fb3bff\n#0005bd\n\n#f09707\n\n\n\n\n#a402a8"
+    },
+    "\n`\n\n\n\n\n\n\n\nY"
+  ],
+  [
+    {
+      "y": -0.3799999999999999,
+      "x": 2.5,
+      "t": "#fb3bff\n#0005bd\n#a816c6\n#d78502"
+    },
+    "è\n)\në\n<i class='kb kb-Arrows-Down'></i>\n\n\n\n\n\nE\n<i class='kb kb-Unicode-Option-1'></i>",
+    {
+      "x": 8.25,
+      "t": "#fb3bff\n#0005bd\n\n#f09707\n\n\n\n\n#a402a8"
+    },
+    "î\n-\n\n5\n\n\n\n\n\nT\n<i class='kb kb-Unicode-Option-1'></i>"
+  ],
+  [
+    {
+      "y": -0.8700000000000001,
+      "x": 1.5,
+      "t": "#fb3bff\n#0005bd\n\n#d78502"
+    },
+    "é\n(\n\n<i class='kb kb-Arrows-Left'></i>\n\n\n\n\n\nS\n<i class='kb kb-Unicode-Command-1'></i>",
+    {
+      "x": 1,
+      "t": "#fb3bff\n#0005bd\n\n#d78502\n\n\n\n\n#a402a8"
+    },
+    "ê\n}\n\n<i class='kb kb-Arrows-Right'></i>\n\n\n\n\n\nN\n<i class='fa fa-angle-up'></i>",
+    {
+      "x": 6.25,
+      "t": "#fb3bff\n#0005bd\n\n#f09707\n\n\n\n\n#a402a8"
+    },
+    "\n+\n\n4\n\n\n\n\n\nR\n<i class='fa fa-angle-up'></i>",
+    {
+      "x": 1
+    },
+    "ï\n/\n\n6\n\n\n\n\n\nI\n<i class='kb kb-Unicode-Command-1'></i>"
+  ],
+  [
+    {
+      "y": -0.8799999999999999,
+      "x": 4.5,
+      "t": "#fb3bff\n#0005bd\n\n#d78502\n\n\n\n\n#a402a8"
+    },
+    "\n=\n\n<i class='kb kb-Unicode-Page-Down-3'></i>\n\n\n\n\n\nF",
+    {
+      "x": 4.25,
+      "t": "#fb3bff\n#0005bd\n\n#f09707\n\n\n\n\n#a402a8"
+    },
+    "\n\\\n\n:\n\n\n\n\n\nL"
+  ],
+  [
+    {
+      "y": -0.8700000000000001,
+      "x": 0.5,
+      "t": "#fb3bff\n#0005bd\n#a816c6\n#d78502"
+    },
+    "à\n{\nä\n\n\n\n\n\n\nA",
+    {
+      "x": 12.25,
+      "t": "#fb3bff\n#0005bd\n\n#f09707\n\n\n\n\n#a402a8"
+    },
+    "ù\n\"\n\n0\n\n\n\n\n\nU"
+  ],
+  [
+    {
+      "y": -0.3799999999999999,
+      "x": 2.5,
+      "t": "#fb3bff\n#0005bd\n\n#d78502\n\n\n\n\n#"
+    },
+    "\n]\n\n<i class='kb kb-Multimedia-Mute-1'></i>\n\n\n\n\n_\n-",
+    {
+      "x": 8.25,
+      "t": "#fb3bff\n#0005bd\n\n#f09707\n\n\n\n\n#a402a8"
+    },
+    "\n;\n\n2\n\n\n\n\n\nG"
+  ],
+  [
+    {
+      "y": -0.8700000000000001,
+      "x": 1.5,
+      "t": "#fb3bff\n#0005bd\n\n#d78502\n\n\n\n\n#a402a8"
+    },
+    "\n[\n\n<i class='kb kb-Multimedia-Volume-Down-2'></i>\n\n\n\n\n\nX",
+    {
+      "x": 1
+    },
+    "\n_\n\n<i class='kb kb-Multimedia-Volume-Up-2'></i>\n\n\n\n\n\nV",
+    {
+      "x": 6.25,
+      "t": "#fb3bff\n#0005bd\n\n#f09707\n\n\n\n\n#a402a8"
+    },
+    "\n!\n\n1\n\n\n\n\n\nH",
+    {
+      "x": 1,
+      "t": "#fb3bff\n#0005bd\n\n#f09707\n\n\n\n\n#"
+    },
+    "\n:\n\n3\n\n\n\n\n<\n,"
+  ],
+  [
+    {
+      "y": -0.8799999999999999,
+      "x": 4.5,
+      "t": "#fb3bff\n#0005bd\n\n#d78502\n\n\n\n\n#a402a8"
+    },
+    "\n#\n\n<i class='kb kb-Line-Start'></i>\n\n\n\n\n\nB",
+    {
+      "x": 4.25,
+      "t": "#fb3bff\n#0005bd\n\n#f09707"
+    },
+    "\n|\n\n\n\n\n\n\n>\n."
+  ],
+  [
+    {
+      "y": -0.8700000000000001,
+      "x": 0.5,
+      "t": "#fb3bff\n#0005bd\n\n#d78502\n\n\n\n\n#a402a8"
+    },
+    "\n~\n\n\n\n\n\n\n\nZ",
+    {
+      "x": 12.25,
+      "t": "#fb3bff\n#0005bd\n\n#f09707\n\n\n\n\n#a402a8"
+    },
+    "\n?\n\n\n\n\n\n\n\nK"
+  ],
+  [
+    {
+      "rx": 6.5,
+      "ry": 4.25,
+      "y": 0.25,
+      "x": -3,
+      "t": "#000000",
+      "a": 7,
+      "fa": [
+        6
+      ]
+    },
+    "<i class='kb kb-Unicode-Command-3'></i>"
+  ],
+  [
+    {
+      "rx": 13,
+      "y": 0.25,
+      "x": -2.25
+    },
+    "<i class='kb kb-Unicode-Command-3'></i>"
+  ],
+  [
+    {
+      "r": 10,
+      "rx": 6.5,
+      "y": 0.5499999999999998,
+      "x": -1.67,
+      "t": "#000000\n\n\n#f09707",
+      "a": 4,
+      "fa": [
+        6,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        6
+      ]
+    },
+    "\n\n\n<i class='mss mss-Unicode-DeleteRight-Big-2'></i>\nshift\n\n\n\n\n<i class='mss mss-Unicode-BackSpace-DeleteLeft-Big-2'></i>"
+  ],
+  [
+    {
+      "r": 20,
+      "y": -0.9500000000000002,
+      "x": -0.25,
+      "t": "#000000\n\n\n\n#f09707",
+      "a": 7
+    },
+    "\n\n\n\nnav"
+  ],
+  [
+    {
+      "r": -20,
+      "rx": 13,
+      "y": -0.75,
+      "x": -4.75
+    },
+    "\n\n\n\nnav"
+  ],
+  [
+    {
+      "r": -10,
+      "y": -0.40000000000000036,
+      "x": -3.5,
+      "t": "#000000\n\n\n#f09707\n#0005bd",
+      "a": 4
+    },
+    "\n\n\n<i class='mss mss-Unicode-Escape-3'></i>\naltgr\n\n\n\n\n<i class='mss mss-Return-5'></i>"
+  ]
+]
